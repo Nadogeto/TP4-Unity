@@ -4,16 +4,25 @@ using UnityEngine;
 
 public class Reservoir : MonoBehaviour
 {
-    private double essence;
-    public bool stop = false;
-    
+    public double essence;
+    public bool stop;
+
+    float elapsTime = 0f;
+
     void Update()
-    {    
-        essence -= Time.deltaTime;
+    {
+        elapsTime += Time.deltaTime;
+        if (elapsTime >= 1f)
+        {
+            elapsTime = elapsTime % 1f;
+            essence = essence - 1;
+        }
+
+        roule(essence);
     }
     
     public Reservoir() { //Constructeur
-        essence = 1;
+        essence = 10;
         Debug.Log("Essence :" + essence);
     }
 
@@ -24,14 +33,14 @@ public class Reservoir : MonoBehaviour
     public void setEssence(double valeur) {
         essence = valeur;
     }
-    
-    public bool roule(double consommation) { 
-        if (essence == 0)
+
+    public bool roule(double consommation)
+    {
+        if (consommation == 0)
         {
             stop = true;
-            Debug.Log("empty");
         }
 
-        return stop;
+        return false;
     }
 }
