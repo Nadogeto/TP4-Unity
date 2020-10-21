@@ -5647,10 +5647,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 111477490, guid: 70bf34f6c25c948458f254e87188b00b, type: 3}
+      propertyPath: BypassEffects
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 111477490, guid: 70bf34f6c25c948458f254e87188b00b, type: 3}
+      propertyPath: m_Pitch
+      value: -0.14
+      objectReference: {fileID: 0}
     - target: {fileID: 1867744768, guid: 70bf34f6c25c948458f254e87188b00b, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 2004343160}
+    - target: {fileID: 1867744768, guid: 70bf34f6c25c948458f254e87188b00b, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 412913209}
     - target: {fileID: 1867744773, guid: 70bf34f6c25c948458f254e87188b00b, type: 3}
       propertyPath: essence
       value: 10
