@@ -11,7 +11,8 @@ public class Reservoir : MonoBehaviour
 
     void Update()
     {
-        elapsTime += Time.deltaTime;
+        //decrease essence throughout time
+        elapsTime += Time.deltaTime;  
         if (elapsTime >= 1f)
         {
             elapsTime = elapsTime % 1f;
@@ -34,8 +35,14 @@ public class Reservoir : MonoBehaviour
         essence = valeur;
     }
 
+    //indicates that essence has rechead 0
     public bool roule(double consommation)
     {
+        if(consommation <= 10)
+        {
+            stop = false;
+        }
+
         if (consommation == 0)
         {
             stop = true;

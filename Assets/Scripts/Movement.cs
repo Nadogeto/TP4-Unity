@@ -6,25 +6,22 @@ public class Movement : MonoBehaviour
 {
     public GameObject target;
     public GameObject car;
-    public GameObject canvas;
 
     private float speed = 10;
     public Reservoir res;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        car = GameObject.FindGameObjectWithTag("Car");
-    }
-
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * speed);
+        //moves the vehicule to the target position
+        if (car.GetComponent<Reservoir>().stop == false)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * speed);
+        }
+        //when the resevoir has reached 0, stops the car
         if (car.GetComponent<Reservoir>().stop == true)
         {
-            canvas.SetActive(true);
-            Destroy(this);
+            transform.position = target.transform.position;//not the best practice
         }
     }
 }
