@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //resets the essence count
+    //resets the essence count of Reservoir and the position of the vehicle 
     public void RestartCar()
     {
         car.transform.position = startPoint.transform.position;
