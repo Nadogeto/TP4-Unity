@@ -18,12 +18,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //resets the essence count
     public void RestartCar()
     {
         car.transform.position = startPoint.transform.position;
         car.GetComponent<Reservoir>().essence = 10;
     }
 
+    //reloads the scene(not the best practice)
+    //the best practice => use active scene
     public void RestartGame()
     {
         SceneManager.LoadScene("Prototype 1");
