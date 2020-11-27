@@ -7,8 +7,7 @@ public class Movement : MonoBehaviour
     public GameObject target;
     public GameObject car;
 
-    private float speed = 10;
-    public Reservoir res;
+    public float speed = 10;
 
     // Update is called once per frame
     void Update()
