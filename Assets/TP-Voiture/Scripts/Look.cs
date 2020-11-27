@@ -8,7 +8,6 @@ public class Look : MonoBehaviour
     public Vector3 car_Pos;
     float speed = 10;
 
-    // Update is called once per frame
     void Update()
     {
         car_Pos = car.transform.position; //formalization
