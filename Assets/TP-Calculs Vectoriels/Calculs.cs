@@ -19,8 +19,7 @@ public class Calculs : MonoBehaviour
     //#4 v_soustraction vecteurs 3D
     Vector3 d_Va;
     Vector3 d_Vb;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         //#1
