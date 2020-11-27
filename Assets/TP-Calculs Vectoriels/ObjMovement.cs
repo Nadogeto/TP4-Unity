@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class ObjMovement : MonoBehaviour
 {
-    //vitesse de déplacement
+    //movement speed
     public float m_Speed = 3f;
-    //vitesse de rotation
+    //rotation speed
     public float r_Speed = 45;
 
     // Update is called once per frame
     void Update()
     {
-        //déplace l'objet vers l'avant (0, 0, 1)
+        //moves the object forward (0, 0, 1)
         transform.Translate(Vector3.forward * Time.deltaTime * m_Speed);
-        //fait tourner l'objet 
+        //rotates it
         transform.Rotate(Vector3.up, r_Speed * Time.deltaTime);
     }
 }
