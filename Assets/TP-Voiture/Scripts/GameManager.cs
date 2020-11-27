@@ -20,9 +20,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //resets the essence count of Reservoir and the position of the vehicle 
+    //resets the essence count of Reservoir and the position of the vehicle and its movements
     public void RestartCar()
     {
+        car.GetComponent<Movement>().enabled = true;
         car.transform.position = carStartPoint.transform.position;
         car.GetComponent<Reservoir>().essence = 10;
 
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour
     }
 
     //reloads the scene(not the best practice)
-    //the best practice => use active scene
+    //the best practice => use active scene and restart the song
     public void RestartGame()
     {
         SceneManager.LoadScene("Voiture");
