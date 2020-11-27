@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
         //when the reservoir has reached 0, stops the car
         if (car.GetComponent<Reservoir>().stop == true)
         {
-            transform.position = target.transform.position;//not the best practice
+            speed = 0;//not the best practice
         }
     }
 }

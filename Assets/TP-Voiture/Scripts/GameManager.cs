@@ -29,6 +29,6 @@ public class GameManager : MonoBehaviour
     //the best practice => use active scene
     public void RestartGame()
     {
-        SceneManager.LoadScene("Prototype 1");
+        SceneManager.LoadScene("Voiture");
     }
 }
