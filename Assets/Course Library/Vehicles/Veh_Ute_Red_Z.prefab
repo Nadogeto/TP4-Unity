@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3380022}
   - component: {fileID: 2354226}
   - component: {fileID: 6535359504094003397}
+  - component: {fileID: 103474093}
   m_Layer: 0
   m_Name: Wheel_rr
   m_TagString: Untagged
@@ -96,6 +97,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300008, guid: a7dca03bf1b6f9b46b6916fa5450f775, type: 3}
+--- !u!114 &103474093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b659963327a20b94ba03dd7ef7eb8820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 178130}
 --- !u!1 &151112
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,6 +122,7 @@ GameObject:
   - component: {fileID: 3333752}
   - component: {fileID: 2351866}
   - component: {fileID: 8928475881048466891}
+  - component: {fileID: 1175208505}
   m_Layer: 0
   m_Name: Wheel_rl
   m_TagString: Untagged
@@ -192,6 +207,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300006, guid: a7dca03bf1b6f9b46b6916fa5450f775, type: 3}
+--- !u!114 &1175208505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b659963327a20b94ba03dd7ef7eb8820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 178130}
 --- !u!1 &156822
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,6 +232,7 @@ GameObject:
   - component: {fileID: 3339952}
   - component: {fileID: 2339896}
   - component: {fileID: 1427151352231724626}
+  - component: {fileID: 789117984}
   m_Layer: 0
   m_Name: Wheel_fr
   m_TagString: Untagged
@@ -288,6 +317,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: a7dca03bf1b6f9b46b6916fa5450f775, type: 3}
+--- !u!114 &789117984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b659963327a20b94ba03dd7ef7eb8820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 178130}
 --- !u!1 &165870
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +342,7 @@ GameObject:
   - component: {fileID: 3333958}
   - component: {fileID: 2319856}
   - component: {fileID: 185459391044287166}
+  - component: {fileID: 323552492}
   m_Layer: 0
   m_Name: Wheel_fl
   m_TagString: Untagged
@@ -384,6 +427,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: a7dca03bf1b6f9b46b6916fa5450f775, type: 3}
+--- !u!114 &323552492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b659963327a20b94ba03dd7ef7eb8820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 178130}
 --- !u!1 &178130
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +454,7 @@ GameObject:
   - component: {fileID: 3313442307395238052}
   - component: {fileID: 1867744768}
   - component: {fileID: 1867744773}
+  - component: {fileID: 2081270778}
   m_Layer: 0
   m_Name: Veh_Ute_Red_Z
   m_TagString: Car
@@ -501,7 +558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   car: {fileID: 178130}
-  res: {fileID: 1867744773}
+  speed: 10
 --- !u!114 &1867744773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,8 +571,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1719bf460ca345459aeead7f7e38abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  essence: 30
+  essence: 10
   stop: 0
+--- !u!114 &2081270778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc0d8bfd170f60c4aaa5ee82c057139f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 178130}
 --- !u!1 &111477489
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +630,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 226d3db63c679fd4693b973c8c302cd7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.552
-  m_Pitch: -0.27
+  m_Pitch: -0.14
   Loop: 0
   Mute: 0
   Spatialize: 0
