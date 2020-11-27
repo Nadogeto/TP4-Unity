@@ -14,7 +14,7 @@ public class Deplacement : MonoBehaviour
 
         if (essence > 0)
         {
-            if (Input.GetKeyDown(KeyCode.DownArrow) && speed > 0)
+            if (Input.GetKeyDown(KeyCode.DownArrow) && speed > 1)
             {
                 car.GetComponent<Movement>().speed--;
             }
@@ -23,6 +23,5 @@ public class Deplacement : MonoBehaviour
                 car.GetComponent<Movement>().speed++;
             }
         }
-        Debug.Log(speed);
     }
 }

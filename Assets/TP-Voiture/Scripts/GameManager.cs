@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject car;
+    public GameObject cam;
     public GameObject canvas;
-    public GameObject startPoint;
+    public GameObject carStartPoint;
+    public GameObject camStartPoint;
 
     // Update is called once per frame
     void Update()
@@ -21,8 +23,10 @@ public class GameManager : MonoBehaviour
     //resets the essence count of Reservoir and the position of the vehicle 
     public void RestartCar()
     {
-        car.transform.position = startPoint.transform.position;
+        car.transform.position = carStartPoint.transform.position;
         car.GetComponent<Reservoir>().essence = 10;
+
+        cam.transform.position = camStartPoint.transform.position;
     }
 
     //reloads the scene(not the best practice)

@@ -15,6 +15,7 @@ public class Movement : MonoBehaviour
         //moves the vehicule to the target position
         if (car.GetComponent<Reservoir>().stop == false)
         {
+            speed = 10;
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * speed);
         }
         //when the reservoir has reached 0, stops the car
